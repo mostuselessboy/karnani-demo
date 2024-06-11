@@ -1,0 +1,270 @@
+
+:root {
+  --primary-green:#25CFC6;
+  --primary-green-dark:#0C716E;
+
+}
+
+@font-face {
+  font-family: EffraBold;
+  src: url("fonts/Effra_Trial_Bd.ttf");
+}
+
+@font-face {
+  font-family: EffraLight;
+  src: url("fonts/Effra_Trial_Lt.ttf");
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: EffraLight;
+}
+
+html,
+body {
+  max-width: 100vw;
+  padding-top: 2.5rem;
+  overflow-x: hidden;
+}
+
+.fadeBackground{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-image: linear-gradient(45deg, black, transparent);
+}
+.primaryButton{
+  background-image: linear-gradient(90deg, var(--primary-green), var(--primary-green-dark));
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: 0px;
+  transition: 0.4s ease;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.primaryButton:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.headline{
+  width: 100%;
+  margin: 4rem 0;
+  text-align: center;
+  font-family: EffraBold;
+
+}
+
+.Navbar{
+  height: 5rem;
+  width: 95vw;
+  padding: 0 2.5vw;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.389);
+  align-items: center;
+  /* backdrop-filter: blur(1rem); */
+  background: #ffffff;  
+}
+.verticalLine{
+  top:0;
+  position: absolute;
+  left: 50%;
+  background-color: rgb(200, 200, 200);
+  width: 0.1rem;
+  z-index: -1;
+  height: 100%;
+
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.SearchContainer{
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  width:13rem;
+  height: fit-content;
+  padding: 0.6rem .5rem;
+  border-radius: 0.7rem;
+  align-items: center;
+  }
+  .SearchContainer input{
+    width: 90%;
+    font-family: effrabold;
+  background-color: transparent;
+  border: 0px;
+  padding: 0 .5rem;
+  font-size: 1.2rem;
+}
+.SearchContainer input:focus{
+  outline: none;
+}
+.navbarLink {
+  display: flex;
+  max-width: 40rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.navbarLink img {
+  width: 5rem;
+}
+.navbarLink a {
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: 0.3s ease;
+}
+
+.navbarLink a:hover {
+  color: #0C716E;
+  font-family: effrabold;
+  transform: scale(1.06);
+}
+
+.footer{
+  display: flex;
+  color: white;
+  flex-direction: column;
+  padding:6rem 2rem;
+  background-color: #1E272F;
+  gap: 7rem;
+}
+.footerSmallContainer{
+  display: flex;
+  gap:2rem;
+  justify-content: space-between;
+   ;
+}
+.footerSocial{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.footerMain{
+  display: flex;
+  color: white;
+  flex: 5;
+  flex-wrap: wrap;
+  gap: 7rem;
+}
+.subFooter1{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  flex: 2;
+  min-width: 20rem
+  }
+.subFooter1 img{
+  width: 4rem;
+}
+.subFooter1 h3{
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.linkText{
+  color:#25CFC6;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.subFooter2{
+  gap: 1.3rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.subFooter2 a{
+  font-family: effralight;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.hamburgerMenu{
+  padding-right: 2rem;
+  display: none;
+
+}
+.faq-container {
+  width: 90%;
+  margin: 0 5%;
+  padding: 5rem 0;
+}
+
+.faq-item {
+  margin: 20px 0;
+  border: 2px solid #b0adad;
+  padding: 1rem 2.5%;
+  width: 95%;
+  border-radius: 0.2rem;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-icon {
+  color: #717171;
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  margin-top: 5px;
+}
+.showNavbarMobileLink{
+  display: flex  !important;
+}
+.navbarLinksMobile{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.588);
+  width: 100vw;
+  display: none;
+  backdrop-filter: blur(1rem);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  gap:2rem
+
+}
+.navbarLinksMobile a{
+  font-size: 2rem;
+  font-family: EffraBold;
+
+}
+@media (max-width: 1160px)  {
+  .HideTablet{
+    display: none !important;
+
+  }
+}
+
+@media (max-width: 650px)  {
+  .HideMobile{
+    display: none !important;
+  }
+  .hamburgerMenu{
+    display: block;
+
+  }
+}
